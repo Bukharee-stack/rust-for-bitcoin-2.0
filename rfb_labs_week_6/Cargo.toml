@@ -1,0 +1,40 @@
+[package]
+name = "rfb_labs_week_6"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# BDK for wallet functionality
+bdk_wallet = "1.0.0"
+bdk_chain = "0.22.0"
+bdk_file_store = "0.17.0"
+bdk_bitcoind_rpc = "0.17.0"
+
+# Bitcoin core RPC
+bitcoincore-rpc = "0.19.0"
+
+# Bitcoin primitives
+bitcoin = "0.32.0"
+
+# Database
+rusqlite = { version = "0.32.0", features = ["bundled"] }
+
+# CLI
+clap = { version = "4.5.0", features = ["derive"] }
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Configuration
+dotenv = "0.15.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Crypto/keys
+bip39 = { version = "2.0", features = ["rand_core"] }
+rand = "0.8"
+
+# Logging
+env_logger = "0.11.0"
+log = "0.4"
